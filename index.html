@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': '640px',
+
+
+                    'md': '768px',
+
+
+                    'lg': '1024px',
+
+
+                    'xl': '1280px',
+
+
+                    '2xl': '1536px',
+
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+
+        }
+
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+  
+    }
+    @layer base {
+*{
+    @apply m-0 p-0 box-border font-['system-ui']
+}
+.wrapper {
+    @apply min-h-full flex flex-col;
+}
+input {
+  all: unset;
+}
+#body{
+    overflow-x: hidden;
+}
+    }
+    @layer components{
+.nav-a{
+    @apply text-[15px] font-[500] text-[#5e5e5e] hover:animate-pulse
+}
+#rotate{
+
+}
+    }
+  </style>
+    <title>MainPage</title>
+</head>
+
+<body>
+    <div class="wrapper" id="body">
+        <div class="h-screen flex w-full flex-col">
+            <header class="flex justify-between w-full mt-[20px]  flex-col items-center sm:flex-row items-start">
+                <div class="flex ml-[25px] cursor-pointer ">
+                    <span class="text-[25px] font-bold">Premium</span>
+                    <span class="text-[15px] font-medium">Car</span>
+                </div>
+                <div class="flex mr-[0px] sm:mr-[25px] scale-[0.9] sm:scale-[1]">
+                    <nav class="flex gap-[20px]">
+                        <a href="#" class="nav-a" id="sale">Акции</a>
+                        <a href="#" class="nav-a">Поиск</a>
+                        <a href="#" class="nav-a">Регистрация</a>
+                        <a href="#" class="nav-a">Личный кабинет</a>
+
+                    </nav>
+                </div>
+            </header>
+            <main class="flex flex-col w-full justify-around mt-[100px]">
+                <!-- <h1 class="text-[35px] font-bold">Все дороги ведут от нас!</h1>
+                <p class="max-w-[400px] mt-[10px]">С нашими автомобилями вы испытаете невероятный комфорт и удовольствие! Самые низкие цены на рынке ,
+                    более тысячи положительных отзывов!</p> -->
+                <div class="flex w-full justify-around flex-col items-center">
+                    <div class="flex flex-col items-center">
+                        <h1 class="text-[30px] font-bold">Выбери свой автомобиль прямо сейчас!</h1>
+                    </div>
+                    <div class="flex gap-[100px] mt-[50px]">
+                        <img src="./car_1.png/reverse.png" alt="Car" class="hover:scale-[1.1] duration-300">
+                        <img src="./car_1.png/Tanzania-2300w_1.png" alt="Car" class="hover:scale-[1.1] duration-300">
+                    </div>
+                    
+                    <div class="flex mt-[75px]">
+                        <div class="flex flex-col sm:flex-row">
+                            <div class="flex border-[2px] w-[150px] h-[40px]">
+                                <input type="text" placeholder="  Название города" class="flex  w-[150px] h-[40px]">
+                            </div>
+                            <div class="flex border-[2px] w-[150px] h-[40px] ml-[0.5px]">
+                                <input type="text" placeholder="            Дата" class="flex  w-[150px] h-[40px]">
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <div class="flex border-[2px] w-[150px] h-[40px] ml-[0.5px]">
+                                <input type="text" placeholder="          Марка" class="flex  w-[150px] h-[40px]">
+                            </div>
+                            <div
+                                class="bg-[#32c939] flex border-[2px] w-[150px] h-[40px] ml-[0.5px] justify-center items-center text-white font-normal text-[15px] cursor-pointer hover:animate-pulse">
+                                Найти</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="h-screen flex w-full flex-col" id="salePage">
+            <main class="flex w-full">
+
+                <div class="flex flex-col w-full">
+                    <div class="flex w-full justify-center items-center mt-[70px]">
+                        <h1 class="text-[35px] font-medium ">Акции</h1>
+                    </div>
+                    <div class="flex w-full justify-evenly flex-wrap mt-[100px] ">
+                        <div class="flex flex-col hover:scale-[1.1] duration-300 cursor-pointer">
+
+                            <img src="./car_1.png/sale1.png" alt="Car">
+
+                            <div
+                                class="bg-[#32c939] max-w-[317px] h-[50px] w-full opacity-[0.8] flex justify-center items-center">
+                                <!-- <span class="text-white font-normal text-[20px] cursor-pointer">Подробнее</span> -->
+                                <span class="text-white font-normal text-[20px] cursor-pointer">Подробнее</span>
+                            </div>
+                            <div
+                                class="flex max-w-[317px] w-full h-[50px] border-[2px] border-[#66d26b] rounded-[15px] mt-[25px] opacity-[0.8] justify-center ">
+                                <div class="w-[110px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[130px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[30px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex flex-col hover:scale-[1.1] duration-300 cursor-pointer my-[15px] sm:my-[0px]">
+
+                            <img src="./car_1.png/sale2.png" alt="Car">
+                            <div
+                                class="bg-[#32c939] max-w-[317px] h-[50px] w-full opacity-[0.8] flex justify-center items-center ">
+                                <span class="text-white font-normal text-[20px] cursor-pointer">Подробнее</span>
+                            </div>
+                            <div
+                                class="flex max-w-[317px] w-full h-[50px] border-[2px] border-[#66d26b] rounded-[15px] mt-[25px] opacity-[0.8] justify-center ">
+                                <div class="w-[100px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[140px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[25px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex flex-col hover:scale-[1.1] duration-300">
+
+                            <div class="flex flex-col cursor-pointer">
+                                <img src="./car_1.png/sale1.png" alt="Car">
+                                <div
+                                    class="bg-[#32c939] max-w-[317px] h-[50px] w-full opacity-[0.8] flex justify-center items-center">
+                                    <span class="text-white font-normal text-[20px] cursor-pointer">Подробнее</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex max-w-[317px] w-full h-[50px] border-[2px] border-[#66d26b] rounded-[15px] mt-[25px] opacity-[0.8] justify-center ">
+                                <div class="w-[80px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[50px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+                                <div
+                                    class="w-[105px] h-[15px] bg-[#66d26b] animate-pulse rounded-[25px] ml-[15px] mt-[15px]">
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </main>
+
+
+
+            <header class="w-full flex justify-center items-center mt-[60px]">
+                <h1 class="text-[30px] font-medium">
+                    Получайте еще больше бонусов!
+                </h1>
+            </header>
+            <main class="flex w-full justify-center mt-[120px]">
+                <div
+                    class="flex max-w-[1000px] w-full border-[2px] border-[#66d26b] h-[400px] rounded-[30px] justify-between items-center">
+                    <div class="ml-[15px] flex flex-col justify-center ">
+                        <p class="nav-a">Введите ваш Email чтобы получать информацию о бонусах первым!</p>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="max-w-[250px] h-[35px] border-[2px] border-[#66d26b] w-full rounded-[10px] flex items-center mt-[15px]">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div
+                                class="bg-[#66d26b] max-w-[200px] w-full h-[35px] rounded-[3px] flex justify-center items-center cursor-pointer hover:scale-[1.1] duration-300 mt-[25px]">
+                                <span class="text-white font-normal text-[20px]">Подписаться</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-[350px] w-full flex h-[280px] hidden md:block">
+                        <img src="./car_1.png/emailPhoto.png" alt="Photo" class="rounded-[20px] ">
+                    </div>
+                </div>
+            </main>
+
+            <footer class="flex w-full h-full  items-end mt-[35px]">
+                <nav class="flex w-full justify-around flex-wrap sm:flex-row">
+                    <a href="#" class="nav-a">Телефон 8 (800) 555-35-35 </a>
+                    <a href="#" class="nav-a">Акции</a>
+                    <a href="#" class="nav-a">Найти</a>
+                    <a href="#" class="nav-a">Регистрация</a>
+                    <a href="#" class="nav-a">Личный Кабинет</a>
+                </nav>
+
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="scroll.js"></script>
+</html>
